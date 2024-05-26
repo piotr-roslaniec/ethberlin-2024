@@ -4,6 +4,7 @@ use hyper::service::{make_service_fn, service_fn};
 use hyper::{Body, Request, Response, Server};
 use std::convert::Infallible;
 use std::net::SocketAddr;
+use std::time::Instant;
 
 mod sgx;
 mod ts;
@@ -26,7 +27,10 @@ async fn main() {
     // }
     // println!();
 
+    let start = Instant::now();
     run().await;
+    let duration = start.elapsed();
+    println!("Time elapsed in run() is: {:?}", duration);
 
     // let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
     // let make_service =
