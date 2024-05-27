@@ -20,8 +20,7 @@ make SGX=1
 make SGX=1 start-gramine-server
 ```
 
-To test with non-SGX Gramine instead, omit `SGX=1` in both commands. You may want to use `docker compose` set up for
-running on SGX.
+To test with non-SGX Gramine instead, omit `SGX=1` in both commands. You may want to use `docker compose` setup for running on SGX.
 
 # Attestation
 
@@ -45,16 +44,16 @@ docker compose run --rm gramine gramine-sgx synedrion-sgx-rpc-server
 - [x] Benchmark the overhead of running Synedrion in an enclave
 - [ ] Producing a quote and a report for specific user data
 - [ ] Configure remote attestation using DCAP
-- [ ] Using the quote and report to prove origin of a secret share for Synedrion participant
+- [ ] Using the quote and report to prove the origin of a secret share for Synedrion participant
 - [ ] Running Synedrion end-to-end in a multi-participant setup
 - [ ] (Optional) Run & terminate TLS communication in the enclave
 
 # "Benchmarks"
 
-In enclave (SGX=1):   2.486434s
-In simulated enclave: 2.033924s
+- In enclave (SGX=1):   2.486434s
+- In simulated enclave: 2.033924s
 
-TODO: Benchmark Synedrion steps seperately
+TODO: Benchmark Synedrion steps separately
 
 # References
 

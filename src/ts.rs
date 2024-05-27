@@ -1,3 +1,5 @@
+// Adapted from: https://github.com/entropyxyz/synedrion/blob/25373111cbb01e1a25d8a5c5bb8f4652c725b3f1/synedrion/tests/threshold.rs
+
 use std::collections::BTreeMap;
 
 use rand::Rng;
